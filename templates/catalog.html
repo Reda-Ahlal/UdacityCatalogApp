@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="sidebar">
+    <h1>Categories</h1>
+    <div class="nav">
+      {% for category in categories %}
+         <a href="{{ url_for('showMoviesByCategory', category_name = category.name)}}">{{category.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="main">
+    <h1>Latest Movies Added</h1>
+    <div class="vertical-menu">
+        {% for m in latest_movies_added %}
+            {% set name = creators[loop.index - 1] %}
+           <a href="{{ url_for('showMoviesDescription', category_name = m.Category_name, movie_name = m.Movie_name)}}">
+              {{m.Movie_name}} - {{m.Category_name}} - added by => {{name}}.
+           </a>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('addMovie')}}" class="btn add-btn">Add Movie</a>
+  </div>
+</div>
+
+{% endblock %}

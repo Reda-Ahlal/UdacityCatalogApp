@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="sidebar">
+    <h1>Categories</h1>
+    <div class="nav">
+      {% for category in categories %}
+         <a href="{{ url_for('showMoviesByCategory', category_name = category.name)}}">{{category.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="main">
+    <h1>Delete Movie</h1>
+    <div class="sec">
+      <h2> Are you sure you want to delete "{{movie.name}}"? </h3>
+      <form action="{{ url_for('deleteMovie', movie_name = movie.name, category_name = category_name)}}" method = 'POST'>
+        <button  type="submit" class="btn sub dng">Delete</button>
+      </form>
+      <a href = '{{url_for('showCatalog')}}' class="btn">Cancel</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

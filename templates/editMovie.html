@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="sidebar">
+    <h1>Categories</h1>
+    <div class="nav">
+      {% for category in categories %}
+         <a href="{{ url_for('showMoviesByCategory', category_name = category.name)}}">{{category.name}}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="main">
+			<h1>Edit Movie</h1>
+      <div class="addForm">
+  			<form action="{{ url_for('editMovie', movie_name = movie.name, category_name = category_name)}}" method = "POST">
+  					<label for="name">Title:</label>
+  					<input type ="text" maxlength="100"  name = 'name' value="{{movie.name }}" required>
+
+  					<label for="year">Year:</label>
+  					<input type ="text" maxlength="100"  name = 'year' value="{{movie.year }}" required>
+
+  					<label for="director">Director:</label>
+  					<input type ="text" maxlength="100"  name = 'director' value="{{movie.director }}" required>
+
+  					<label for="description">Description:</label>
+  					<textarea class= "textDsc" name="description" required>{{movie.description}}</textarea>
+
+  					<label for="category">Category:</label>
+            <select name="category">
+              {%for c in categories%}
+  							{% if c.name ==  category_name%}
+               <option value={{c.name}} selected> {{c.name}}  </option>
+  						  {%else%}
+  						 <option value={{c.name}} > {{c.name}}  </option>
+  						  {% endif %}
+               {% endfor %}
+           </select>
+  					<button class= "sub" type="submit" value="submit">Edit</button>
+  			</form>
+        <a href = '{{url_for('showCatalog')}}' class="btn">Cancel</a>
+      </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, sans-serif;
+  background-color: #eee;
+}
+
+.header {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5px;
+  overflow: hidden;
+  background-color: #000;
+  padding: 40px 80px;
+  border-top: 10px solid #f1c40f;
+  border-radius: 5px;
+}
+
+.header-left {
+  float: left;
+  margin-top: 15px;
+  background-color: #000;
+  text-align: center;
+}
+
+.header-left a {
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #000;
+  color: #f1c40f;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 25px;
+}
+
+.header-left a:hover {
+  background-color: #f1c40f;
+  border-radius: 5px;
+  color: black;
+}
+
+.header-right {
+  float: right;
+  background-color: #000;
+}
+
+.user-profile {
+  background-color: #000;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+.user-profile h3 {
+  display: inline-block;
+  position: relative;
+  bottom: 12px;
+  color: lightgreen;
+  background-color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-profile img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.log {
+  background-color: #000;
+  text-align: center;
+}
+
+.log a {
+  text-align: center;
+  text-decoration: none;
+  padding: 3px 40px;
+  background-color: #f1c40f;
+  color: #000;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 18px;
+  border-radius: 5px;
+}
+
+.log a:hover {
+  background-color: #000;
+  color: #f1c40f;
+}
+
+.sp {
+  margin-top: 30px;
+}
+
+.flash {
+	width:80%;
+  margin-left: 10%;
+	text-decoration: none;
+}
+
+.flash li {
+	list-style-type: none;
+  padding: 5px;
+	text-align: center;
+  font-weight: bold;
+  background-color: #98FB98;
+}
+
+.container {
+  width: 80%;
+  height: auto%;
+  margin-left: 10%;
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 10px 10px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.nav {
+  background-color: #111;
+}
+
+.nav a {
+  padding: 10px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  background-color: #111;
+  border-bottom: 1px solid #818181;
+}
+
+.nav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  flex: 3;
+  background-color: #000;
+  border-radius: 6px;
+  padding-bottom: 20px;
+  min-height: 420px;
+  margin-bottom: 20px;
+}
+
+.main h1 {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 10px 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+.main h2 {
+  background-color: #000;
+  color: gray;
+  margin: 30px 15px 80px 20px;
+}
+
+.vertical-menu {
+  background-color: #000;
+  margin-top: 20px;
+}
+
+.vertical-menu a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ccc;
+  display: block;
+  background-color: #000;
+}
+
+.vertical-menu a:hover {
+  background-color: lightgreen;
+  color: #000;
+}
+
+.sec {
+  background-color: #000;
+}
+
+ .sec form {
+   background-color: #000;
+ }
+
+.description{
+  background-color: #000;
+  margin: 25px;
+  padding: 10px;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+}
+
+.description h3, p {
+  background-color: #000;
+  color: gray;
+  margin-top: 10px;
+}
+
+.description a {
+  background-color: #000;
+  color: gray;
+  font-weight: bold;
+}
+
+.addForm {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.textDsc {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sub {
+  width: 50%;
+  margin-left: 25%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sub:hover {
+  background-color: #45a049;
+}
+
+.btn {
+  background-color: yellow;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 14px 20px;
+  margin-left: 25%;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.btn:hover {
+  background-color: #f1c40f;
+  font-weight: bold;
+}
+
+.dng {
+  background-color: red;
+}
+
+.dng:hover {
+  background-color: tomato;
+}
